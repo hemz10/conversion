@@ -1,3 +1,4 @@
+README.md
 setup.py
 converter.egg-info/PKG-INFO
 converter.egg-info/SOURCES.txt
