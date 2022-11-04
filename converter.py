@@ -11,9 +11,14 @@ def converter(value):
 @click.command()
 @click.option('--value','-v',help="Enter the value to be converted", required=True, prompt="Enter some number to be converted to near: \n")
 def near(value):
-    val=value.replace(".","")
-    for _ in range(24):
-        val = val + "0"
-    while len(val) != 25:
-        val = val[:-1]
+    if "." in value:
+        val=value.replace(".","")
+        for _ in range(24):
+            val = val + "0"
+        while len(val) != 25:
+            val = val[:-1]
+    else:
+        val=value
+        for _ in range(24):
+            val = val + "0"
     print(val)
