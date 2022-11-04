@@ -2,6 +2,7 @@ import click
 
 @click.command()
 @click.option('--value','-v',help="Enter the value to be converted", required=True, prompt="Enter the value to be converted: \n")
+@click.argument('value')
 def converter(value):
 
     near = 1000000000000000000000000
@@ -10,6 +11,7 @@ def converter(value):
 
 @click.command()
 @click.option('--value','-v',help="Enter the value to be converted", required=True, prompt="Enter some number to be converted to near: \n")
+@click.argument('value')
 def near(value):
     if "." in value:
         val=value.replace(".","")
